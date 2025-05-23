@@ -4,7 +4,9 @@ import org.aeonbits.owner.Config;
 
 import java.net.URL;
 
-@Config.Sources("classpath:webdriver.properties")
+@Config.Sources({
+        "classpath:${env}.properties"
+})
 public interface WebDriverConfig extends Config {
 
     @Key("browser")
@@ -12,7 +14,7 @@ public interface WebDriverConfig extends Config {
     Browser browser();
 
     @Key("version")
-    @DefaultValue("100.0")
+    @DefaultValue("122.0")
     String browserVersion();
 
     @Key("remoteUrl")
