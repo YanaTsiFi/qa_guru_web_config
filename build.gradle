@@ -22,8 +22,5 @@ dependencies {
 
 test {
     useJUnitPlatform()
-    systemProperty "env", System.getProperty("env", "local")
-    systemProperty "browser", System.getProperty("browser", "CHROME")
-    systemProperty "version", System.getProperty("version", "122.0")
-    systemProperty "remoteUrl", System.getProperty("remoteUrl", "http://localhost:4444/wd/hub")
+    systemProperties System.getProperties()
 }
