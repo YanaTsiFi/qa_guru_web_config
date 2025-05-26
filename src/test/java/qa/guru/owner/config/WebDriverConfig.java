@@ -18,7 +18,7 @@ public interface WebDriverConfig extends Config {
     String browserVersion();
 
     @Key("remoteUrl")
-    @DefaultValue("http://localhost:4444/wd/hub")
+    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
     URL remoteUrl();
 
     @Key("isRemote")
